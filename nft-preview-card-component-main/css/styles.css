@@ -1,0 +1,142 @@
+/*
+=============
+Global styles
+=============
+*/
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 85%;
+}
+:root {
+  /* Primary colors */
+  --cl-primary-SoftBlue: hsl(215, 51%, 70%);
+  --cl-primary-Cyan: hsl(178, 100%, 50%);
+
+  /* Secudary colors */
+  --cl-secundary-mainBg: hsl(217, 54%, 11%);
+  --cl-secundary-cardBg: hsl(216, 50%, 16%);
+  --cl-secudary-line: hsl(215, 32%, 27%);
+  --cl-secundary-link: hsl(228, 45%, 44%);
+  --cl-secundary-white: hsl(0, 0%, 100%);
+
+  /* font family */
+  --ff-bodyFont: 'Outfit', sans-serif;
+  /* other variables */
+  --fs-p: 18px;
+  --borderRadius: 0.5rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+}
+
+body {
+  background-color: var(--cl-secundary-mainBg);
+  font-family: var(--ff-bodyFont);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h2,
+span > a {
+  color: var(--cl-secundary-white);
+}
+h5 {
+  color: var(--cl-primary-Cyan);
+  display: inline-block;
+}
+p,
+span {
+  color: var(--cl-primary-SoftBlue);
+}
+img {
+  max-width: 100%;
+
+  border-radius: var(--borderRadius);
+}
+a {
+  text-decoration: none;
+}
+
+/*
+=============
+Card styles
+=============
+*/
+
+.card {
+  padding: 20px;
+  width: 275px;
+  background-color: var(--cl-secundary-cardBg);
+  border-radius: var(--borderRadius);
+}
+.img-container {
+  position: relative;
+  max-width: 250px;
+}
+.overlay {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: var(--transition);
+  background-color: var(--cl-primary-Cyan);
+  border-radius: var(--borderRadius);
+}
+.img-container .overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__text {
+  border-bottom: 2px solid var(--cl-secudary-line);
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 40px;
+  display: inline-block;
+  border: 2px solid var(--cl-secundary-white);
+  border-radius: 50%;
+}
+.text__felx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text__picture {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* hover */
+a:hover,
+h2:hover {
+  cursor: pointer;
+  color: var(--cl-primary-Cyan);
+  transition: var(--transition);
+}
+.overlay:hover {
+  opacity: 0.6;
+}
+/*
+=============
+Attribution styles
+=============
+*/
+
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--cl-secundary-white);
+}
+.attribution a {
+  color: var(--cl-secundary-link);
+}
